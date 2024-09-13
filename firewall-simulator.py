@@ -1,7 +1,6 @@
 import random
 
 def generate_random_ip():
-    """Generate a random IP address."""
     return f"192.168.1.{random.randint(0, 20)}"
 
 def check_firewall_rules(ip, rules):
@@ -21,8 +20,7 @@ def main():
         "192.168.1.16": "block",
         "192.168.1.19": "block"
     }
-
-      # Simulate network traffic
+    
     for _ in range(12):
      ip_address = generate_random_ip()
      action = check_firewall_rules(ip_address, firewall_rules)
